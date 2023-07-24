@@ -1,5 +1,6 @@
 #include <LiquidCrystal.h>
 
+// Declare all necessary pins
 const int trigPin = 9;
 const int echoPin = 10;
 const int redPin = 5;
@@ -7,14 +8,16 @@ const int greenPin = 3;
 const int bluePin = 4;
 const int laserPin = 12;
 
+// Declare ultrasonic sensor variables
 long duration;
 int distance;
 
+// Initialize pins for the LCD
 const int rs = 46, en = 44, d4 = 36, d5 = 38, d6 = 40, d7 = 42;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
 void setup() {
-  // declare the LED pins as outputs
+  // declare the LED pins + Laser Pin as outputs
   pinMode(redPin, OUTPUT);
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
